@@ -6,7 +6,7 @@ import inspect
 import logging
 import re
 import time
-import hashlib 
+import hashlib
 from xml.etree import ElementTree
 
 from evelink.thirdparty import six
@@ -323,7 +323,7 @@ class API(object):
             if params:
                 # POST request
                 _log.debug("POSTing request")
-                r = session.post(full_path, params=params)
+                r = session.post(full_path, data=params)
             else:
                 # GET request
                 _log.debug("GETting request")
